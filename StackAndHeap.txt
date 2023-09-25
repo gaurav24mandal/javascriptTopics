@@ -1,0 +1,115 @@
+ Memories  in js 
+ 1 stack memory  in javascript  stack memory is called  as call stack 
+ it works  on LIFO basis, meaning  most  recently called  func is  at the  top 
+ and  it first one to be executed  and remove  when it completes
+
+JavaScript is primarily associated with the call stack, which manages function calls and 
+their execution contexts. It ensures that functions are executed in the correct order, maintains 
+data isolation between function calls, and handles the flow of control in a JavaScript program.
+Understanding the stack is crucial for effective debugging and writing error-free code in JavaScript.     
+
+
+2 heap memory 
+
+Unlike stack memory, which is used for managing function calls
+and local variables with a limited and predictable lifetime,
+heap memory is used for objects with more flexible lifetimes.
+Here's a more detailed explanation of heap memory in JavaScript:
+
+Heap memory is used to allocate and manage objects and
+data structures in JavaScript. Objects, arrays, 
+functions, and other complex data types are typically stored in the heap.
+
+JavaScript uses a reference-based memory model. Objects 
+in the heap are created and accessed via references 
+(e.g., variables). When you create an object, a 
+reference to that object is stored in a variable, 
+and you can manipulate the object through that reference.
+
+summary
+stack memory 
+let a  =  10 ;
+
+let b = a ;
+
+b =12;
+
+console.log(`a is ${a} b is ${b}`); 
+
+// output is  a = 10 and  b = 12    
+ this example  of  stack memory where  variable is  stored  and whenever it
+  
+ 
+Stack Memory: explanation
+case 1 Before b = a; Assignment:
+---------
+|   a   | 10
+---------
+|   b   | uninitialized
+---------
+case 2 After b = a; Assignment (Both a and b refer to the same memory location):
+
+Stack Memory:
+---------
+|   a   | 10
+---------
+|   b   | 10
+---------
+case 3 After b = 12; Assignment (Value of b is updated):
+
+Stack Memory:
+---------
+|   a   | 10
+---------
+|   b   | 12
+---------
+i.e when we  are  assiging b = a  since  primitive  datatype return value 
+let b occupy a new space in memory 
+
+
+heap memory
+
+
+// heap memory
+
+let  student = {
+    name: "gaurav",
+    email : "user@123"
+}
+
+let newStudent = student ;
+
+newStudent.email = "gaurav@123"
+
+console.log(newStudent.email);
+console.log(student.email);
+// op :  newStudent.email = gaurav@123 &&  student.email = gaurav@123 
+
+// this is beacuse object is a  non primitive  datatype  or reference  datatype  and return memory location
+// when called hence  newStudent  indicates the  location of  student  and change email for  both student and 
+//newStudent
+
+case 1 Object Creation in Heap Memory:
+
+Heap Memory:
+-------------------------
+|   Object (student)  |
+|  - name: "gaurav"   |
+|  - email: "user@123"|
+-------------------------
+ case 2 Reference Assignment:
+Heap Memory: 
+
+-------------------------
+|   Object (student)   |  <--- Both student and newStudent point to this object
+|   - name: "gaurav"   |
+|   - email: "user@123"|
+-------------------------
+case 3   Property Update:
+Heap Memory:
+-------------------------
+|   Object (student)   |  <--- Both student and newStudent point to this object
+|   - name: "gaurav"   |
+| -email: "gaurav@123" |  <--- Updated property value
+-------------------------
+

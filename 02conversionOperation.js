@@ -64,3 +64,5 @@ const sum = ()=>{
      
 }
 console.log(typeof sum());
+
+
