@@ -51,3 +51,16 @@ console.log(`x is ${x} and y is ${y}`);
 let x1 = 3 ;
 let y2 = ++x1;
 console.log(`x is ${x1} and y is ${y2}`);
+
+
+// symbols 
+
+let id = Symbol('13')
+let id2 = Symbol('13');
+
+let ar = [1 , 2,3,4]
+
+const sum = ()=>{
+     
+}
+console.log(typeof sum());

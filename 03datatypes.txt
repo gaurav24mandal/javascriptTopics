@@ -1,0 +1,32 @@
+javascript   has  basically two types  of  datatype
+1 primitive datatype are call by value
+string 
+number 
+bollean
+null
+undefined 
+Symbol  : are used as  identifiers uniqueness , immutable
+bigInt : 1234567890123456789012345678901234567890n
+
+2 reference  datatype
+eference data types do not return a specific value when they are declared or initialized like 
+primitive data types do. Instead, when you create a reference data type variable or object, it 
+essentially holds a reference to a location in memory where the actual data is stored. 
+This reference is what you work with when you interact with reference data types.
+
+
+typeof array is object
+typeof object is object 
+typeof function is function object
+
+
+1 Arrays = [1,2,3,4,]
+2 objects 
+const person ={
+    name : "gaurav"
+    class : 4
+}
+
+3 function   sum = (a,b)=>{
+    return a+b ;
+} 

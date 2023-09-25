@@ -31,7 +31,7 @@ let student = {
 
 console.log(typeof student); // output : object 
 console.log(typeof undefined); // op : undefined i.e  it s  datatype
-console.log(null);  // op : null and object 
+console.log( typeof container);  // op : object 
 
 
 
