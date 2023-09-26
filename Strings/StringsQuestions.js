@@ -24,7 +24,7 @@ const emptyString = (str)=>{
     return true ;
 }
 
-// Write a JavaScript function to extract a specified number of characters from a string.
+//3 Write a JavaScript function to extract a specified number of characters from a string.
 
 const subStr = (str,n)=>{
      console.log(str.substring(0,n));
@@ -32,7 +32,7 @@ const subStr = (str,n)=>{
 //console.log(subStr("robin",2));
 
 
-// question :  Write a JavaScript function that hides email addresses to prevent unauthorized access.
+// question 4 :  Write a JavaScript function that hides email addresses to prevent unauthorized access.
 
 const auth = (email)=>{
      let emailArr = email.split('@');
@@ -43,9 +43,21 @@ const auth = (email)=>{
      let ans = `${encrypt}...@ ${part2} `
      console.log(ans);
 }
-//console.log(string_parameterize("Robin Singh from USA."));
+  //  5 console.log(string_parameterize("Robin Singh from USA."));
 //"robin-singh-from-usa"
 let hu = 'hey there'
-console.log(hu.replace(' ','-')); 
+//console.log(hu.slice(1));
+//console.log(hu.replace(' ','-')); 
 
-// question --> Write a JavaScript function to capitalize the first letter of a string.
+// question 6 --> Write a JavaScript function to capitalize the first letter of word in a   string.
+
+const stringCap = (str)=>{
+    const words = str.split(' ');
+    
+  const ans  = words.map((i)=>{
+   return  i.charAt(0).toUpperCase()+i.slice(1)
+    })
+   
+    return  ans.join(' ')
+  }
+console.log(stringCap('hi ther my name isk khan'));
