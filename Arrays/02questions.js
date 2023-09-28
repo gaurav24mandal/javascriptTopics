@@ -47,10 +47,63 @@ let a = dup.filter((v,i,b)=>{
 
 let shuffle = [1,2,3,54,65,47,7,1,56]
 let n = shuffle.length 
-console.log(n);
+//console.log(n);
 
 
 for(let i = 0; i<n;i++){
     let rand = Math.floor(Math.random()*n);
-    console.log(shuffle[rand]);
+   // console.log(shuffle[rand]);
 }
+
+/** Write a JavaScript program to compute the union of two arrays. */
+
+let ab  = [1,100,2,3,4]
+let ba = [5,6,8,10,1,2,3]
+let aba = ab.concat(ba);
+//console.log(aba);
+ let ans4 = aba.filter((v,i,arr)=>{
+     let ans = arr.indexOf(v)=== i ;
+     return ans 
+ })
+   let  ans5 =ans4.sort((a,b)=>{
+         return a-b
+   })
+// console.log(ans5);
+
+
+/** Write a JavaScript program to count the number of arrays inside a given array. */
+
+let subarray = [1, [1, 2], 56, [], 56];
+
+let count = 0;
+
+subarray.forEach((item) => {
+  if (Array.isArray(item)) {
+    count++;
+  }
+});
+
+//console.log(count);
+
+/** Write a JavaScript program to check if an array is a factor chain or not. */
+ let factorArray = [2,4,8,16,32,64];
+ function isFactorChain(arr) {
+    // Check if the array has at least two elements
+    if (arr.length < 2) {
+      return false;
+    }
+  
+    // Iterate through the array starting from the second element
+    for (let i = 1; i < arr.length; i++) {
+      // Check if arr[i] is a factor (divisor) of arr[i-1]
+      if (arr[i - 1] === 0 || arr[i - 1] % arr[i] !== 0) {
+       
+        return false;
+      }
+    }
+  
+    // If all elements satisfy the factor condition, it's a factor chain
+    return true;
+  }
+
+ console.log( isFactorChain([2, 4, 8, 16, 32, 64]))
