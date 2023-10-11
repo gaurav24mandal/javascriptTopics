@@ -96,7 +96,7 @@ The map() method of Array instances creates a new array
         return i ;
       }
  })
-//  console.log(evenNum);
+  console.log(`${evenNum} yhis`);
 
 
 /*  
